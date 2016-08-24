@@ -30,7 +30,7 @@ sub push {
 	if (&full)
 	{
 		return;
-		} 
+	} 
 	$$self{"array"}[$index] = $data;
 	$$self{"current_size"} = $index + 1;
 	return $data;
