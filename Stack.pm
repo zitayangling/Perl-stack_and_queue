@@ -1,6 +1,5 @@
 package Stack;
 # use warnings;
-
 sub new {
 	my ($class, $max_size) = @_;
 	my @array = ();
@@ -13,7 +12,6 @@ sub new {
 	bless($self, $class);
 	return $self;
 }
-
 sub size {
 	my $self = shift;
 	my $num = $$self{"current_size"};
@@ -23,7 +21,6 @@ sub size {
 	}
 	return $num;
 }
-
 sub push {
 	my ($self,$data) = @_;
 	my $index = $$self{"current_size"};
@@ -35,7 +32,6 @@ sub push {
 	$$self{"current_size"} = $index + 1;
 	return $data;
 }
-
 sub pop {
 	my $self = shift;
 	my $index = $$self{"current_size"};
@@ -44,7 +40,6 @@ sub pop {
 	$$self{"current_size"} = $index - 1;
 	return $data;
 }
-
 sub empty {
 	my $self = shift;
 	my $index = $$self{"current_size"};
@@ -53,7 +48,6 @@ sub empty {
 		die "this stack is empty!\n";
 	}
 }
-
 sub full {
 	my $self = shift;
 	my $index = $$self{"current_size"};
@@ -62,7 +56,6 @@ sub full {
 		die "this stack is full!\n";	
 	}		
 }
-
 sub top{
  	my $self = shift;
  	my $index = $$self{"current_size"};
